@@ -31,20 +31,39 @@ export class AppComponent {
    },
   ];
 
-  addTodo(newTodoLabel: any){
+  // addTodo(newTodoLabel: any){
+  //   var newTodo = {
+  //     label: newTodoLabel,
+  //     // priority: 1,
+  //     done: false
+  //   };
+  //   this.todos.push(newTodo);
+  // }
+
+  // addPriority(newPriorityNo: any){
+  //   var newPriority = {
+  //     // label: newTodoLabel,
+  //     priority: newPriorityNo ,
+  //     // done: false
+  //   };
+  //   this.todos.push(newPriority);
+  // }
+
+  addTodo( addLabel: string, addNo: number){
     var newTodo = {
-      label: newTodoLabel,
-      priority: 1,
+      label: addLabel,
+      priority: addNo ,
       done: false
     };
     this.todos.push(newTodo);
   }
+
+
   deleteTodo(todo: any) {
     this.todos = this.todos.filter( t => t.label !== todo.label );
   }
-  updateStatus(done: boolean,i: number) {
-    console.log(done,i)
-    todos
-    [i] == ;
-  }
+  // updateStatus(done: boolean,i: number) {
+  //   console.log(done,i)
+  //   todos[i] == ;
+  // }
 }

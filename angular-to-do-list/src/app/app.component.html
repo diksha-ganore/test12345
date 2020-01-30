@@ -1,7 +1,9 @@
 <h1>{{title}}</h1>
 {{todos|json}}
-<input type="text" #newTodo/>
-<button (click)="addTodo(newTodo.value); newTodo.value=''">Add</button> 
+<input type="text" #newTodoLabel/>
+<input type="number" #newTodoPriority/>
+<button (click)="addTodo(newTodoLabel.value,newTodoPriority.value)">Add</button> 
+<!-- <button (click)="addTodo(newTodoLabel.value,newPriorityNo.value); newTodoLabel.value='',newPriorityNo.value=''">Add</button>  -->
 
 <table>
   <tr>
@@ -10,8 +12,9 @@
     <th>Done</th>
     <th>Actions</th>
   </tr>
-  <tr *ngFor="let todo of todos ; let i=index">
-    <td>{{i}}{{todo.label}}</td>
+  <tr *ngFor="let todo of todos; let i=index">
+    
+    <td>{{todo.label}}</td>
     <td>{{todo.priority}}</td>
     <!-- <td>{{todo.done ? '&#10004;' : '&#967;'}}</td> -->
     <td>
