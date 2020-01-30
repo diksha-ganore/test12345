@@ -41,8 +41,26 @@ export class AppComponent {
   }
 
 
-  deleteTodo(todo: any) {
-    this.todos = this.todos.filter( t => t.label !== todo.label );
+  // deleteTodo(todo: any,done: boolean ,i:number) {
+  //   this.todos = this.todos.filter( t => {
+  //    if(t.label !== todo.label){
+  //     return t
+  //    } else {
+  //      if(todo.done === false){ return t}
+  //    }
+  //   } );
+  // }
+
+  deleteTodo(i: number) {
+
+   this.todos.splice(i, 1)
+    // this.todos = this.todos.filter( t => {
+    //  if(t.label !== todo.label){
+    //   return t
+    //  } else {
+    //    if(todo.done === false){ return t}
+    //  }
+    // } );
   }
   updateStatus(done: boolean,i: number) {
      this.todos[i].done = true;
