@@ -1,9 +1,7 @@
 <h1>{{title}}</h1>
-{{todos|json}}
 <input type="text" #newTodoLabel/>
 <input type="number" #newTodoPriority/>
 <button (click)="addTodo(newTodoLabel.value,newTodoPriority.value)">Add</button> 
-<!-- <button (click)="addTodo(newTodoLabel.value,newPriorityNo.value); newTodoLabel.value='',newPriorityNo.value=''">Add</button>  -->
 
 <table>
   <tr>
